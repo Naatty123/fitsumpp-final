@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="public/build/{{ $manifest['resources/css/tailwind.css']['file'] }}">
     <script src="public/build/{{$manifest['resources/scripts/main.ts']['file']}}"></script>
 
-    <link rel="stylesheet" href="build/{{ $manifest['resources/css/tailwind.css']['file'] }}">
-    <script src="build/{{$manifest['resources/scripts/main.ts']['file']}}"></script>
     @else
     @vite
     @endproduction
