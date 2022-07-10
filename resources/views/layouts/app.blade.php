@@ -7,10 +7,16 @@
     <title>Fitsum Advert</title>
     @production
     @php
-        $module = json_decode();
+     $manifest = json_decode(file_get_contents(public_path('build/manifest.json')), true);
+     
+    
     @endphp
+    <link rel="stylesheet" href="public/build/{{ $manifest['resources/css/tailwind.css']['file'] }}">
+    <script src="public/build/{{$manifest['resources/scripts/main.ts']['file']}}"></script>
 
-    @else 
+    <link rel="stylesheet" href="build/{{ $manifest['resources/css/tailwind.css']['file'] }}">
+    <script src="build/{{$manifest['resources/scripts/main.ts']['file']}}"></script>
+    @else
     @vite
     @endproduction
 </head>
